@@ -310,7 +310,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 520,
-        "y": 200,
+        "y": 60,
         "wires": []
     }
 ]
