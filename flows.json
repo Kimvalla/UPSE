@@ -8,6 +8,14 @@
         "env": []
     },
     {
+        "id": "c5f17a1787be7e32",
+        "type": "tab",
+        "label": "Flujo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "17597f30778e8c34",
         "type": "debug",
         "z": "bd0405d202054c17",
@@ -257,6 +265,52 @@
         "statusType": "auto",
         "x": 550,
         "y": 300,
+        "wires": []
+    },
+    {
+        "id": "dde0e9652f69556c",
+        "type": "inject",
+        "z": "c5f17a1787be7e32",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Hola Kimberly",
+        "payloadType": "str",
+        "x": 210,
+        "y": 100,
+        "wires": [
+            [
+                "26fb2b92e9ef62c2"
+            ]
+        ]
+    },
+    {
+        "id": "26fb2b92e9ef62c2",
+        "type": "debug",
+        "z": "c5f17a1787be7e32",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 100,
         "wires": []
     }
 ]
