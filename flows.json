@@ -1,0 +1,262 @@
+[
+    {
+        "id": "bd0405d202054c17",
+        "type": "tab",
+        "label": "Ejercicio 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "17597f30778e8c34",
+        "type": "debug",
+        "z": "bd0405d202054c17",
+        "name": "HolaMundo",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "64e8e4fd32967c55",
+        "type": "inject",
+        "z": "bd0405d202054c17",
+        "name": "Texto",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "helado",
+        "payload": "Chocolate",
+        "payloadType": "str",
+        "x": 150,
+        "y": 60,
+        "wires": [
+            [
+                "17597f30778e8c34"
+            ]
+        ]
+    },
+    {
+        "id": "da16ce2654d3f6f9",
+        "type": "inject",
+        "z": "bd0405d202054c17",
+        "name": "Sensor",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "sensor",
+        "payload": "{\"Temperatura\":39.2,\"Humedad\":15,\"Ubicacion\":\"UTMACH\"}",
+        "payloadType": "json",
+        "x": 150,
+        "y": 120,
+        "wires": [
+            [
+                "17597f30778e8c34"
+            ]
+        ]
+    },
+    {
+        "id": "4c15ebf74aaf2f9f",
+        "type": "switch",
+        "z": "bd0405d202054c17",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "10",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "43",
+                "vt": "num"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 350,
+        "y": 200,
+        "wires": [
+            [
+                "22fec02aa9d26d06"
+            ],
+            [
+                "5a1e79fd8d6b10dd"
+            ],
+            [
+                "f8c866e36418dd19"
+            ]
+        ]
+    },
+    {
+        "id": "8e1b0115fd7ac26e",
+        "type": "inject",
+        "z": "bd0405d202054c17",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "LINEA1",
+        "payload": "50",
+        "payloadType": "num",
+        "x": 160,
+        "y": 200,
+        "wires": [
+            [
+                "4c15ebf74aaf2f9f"
+            ]
+        ]
+    },
+    {
+        "id": "c1784f7240241579",
+        "type": "inject",
+        "z": "bd0405d202054c17",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "LINEA2",
+        "payload": "43",
+        "payloadType": "num",
+        "x": 140,
+        "y": 260,
+        "wires": [
+            [
+                "4c15ebf74aaf2f9f"
+            ]
+        ]
+    },
+    {
+        "id": "71733cdc3fc58151",
+        "type": "inject",
+        "z": "bd0405d202054c17",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "LINEA3",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 150,
+        "y": 320,
+        "wires": [
+            [
+                "4c15ebf74aaf2f9f"
+            ]
+        ]
+    },
+    {
+        "id": "22fec02aa9d26d06",
+        "type": "debug",
+        "z": "bd0405d202054c17",
+        "name": "Mayor a 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "5a1e79fd8d6b10dd",
+        "type": "debug",
+        "z": "bd0405d202054c17",
+        "name": "Igual 43",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "f8c866e36418dd19",
+        "type": "debug",
+        "z": "bd0405d202054c17",
+        "name": "Istrue",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 300,
+        "wires": []
+    }
+]
