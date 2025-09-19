@@ -330,35 +330,5 @@
         "x": 460,
         "y": 160,
         "wires": []
-    },
-    {
-        "id": "80b00ccea01007bc",
-        "type": "inject",
-        "z": "c5f17a1787be7e32",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 190,
-        "y": 160,
-        "wires": [
-            [
-                "92854f32d74a08c3",
-                "369f0ef81327d216"
-            ]
-        ]
     }
 ]
